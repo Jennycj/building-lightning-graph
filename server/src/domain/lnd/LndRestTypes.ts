@@ -1,9 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Lnd {
     export interface Graph {
-        // Exercise: define the `nodes` and `edges` properties in this interface.
-        // These arrays of LightningNode and ChannelEdge objects.
-        replace_me_with_actual_properties: any;
+        nodes:LightningNode[];
+        edges:ChannelEdge[]
     }
 
     export interface LightningNode {
