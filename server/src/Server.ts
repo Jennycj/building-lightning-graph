@@ -24,7 +24,8 @@ async function run() {
 
     // Exercise: using the Options defined above, construct an instance
     // of the LndRestClient using the options.
-    const lnd: LndRestClient = undefined;
+    const {lndHost, lndReadonlyMacaroon, lndCert} = options;
+    const lnd: LndRestClient =  new LndRestClient(lndHost, lndReadonlyMacaroon, lndCert);
 
     // construct an IGraphService for use by the application
     const graphAdapter: IGraphService = new LndGraphService(lnd);
